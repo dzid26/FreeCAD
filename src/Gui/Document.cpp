@@ -404,6 +404,7 @@ bool Document::setEdit(Gui::ViewProvider* p, int ModNum, const char *subname)
     else
         view3d = dynamic_cast<View3DInventor *>(setActiveView(vp));
     Application::Instance->setEditDocument(this);
+    Selection().setVisible(SelectionSingleton::VisShow);
 
     d->_editViewProviderParent = vp;
     d->_editSubElement.clear();
